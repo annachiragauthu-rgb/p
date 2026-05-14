@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Purr & Paws Premium</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fdf8f5;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* NAVBAR */
+
+header{
+    width:100%;
+    padding:20px 70px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:36px;
+    font-weight:700;
+    color:#ff5c8a;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:28px;
+    font-size:17px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff5c8a;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('https://www.doggies.com/blog/wp-content/uploads/2017/10/pet-montage-1024x1024.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:85px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    line-height:1.8;
+    max-width:800px;
+    margin:auto;
+}
+
+.hero-buttons{
+    margin-top:40px;
+}
+
+.hero-buttons a{
+    text-decoration:none;
+    padding:16px 40px;
+    margin:10px;
+    border-radius:50px;
+    display:inline-block;
+    transition:0.4s;
+}
+
+.btn1{
+    background:#ff5c8a;
+    color:white;
+}
+
+.btn2{
+    background:white;
+    color:#ff5c8a;
+}
+
+.btn1:hover{
+    transform:translateY(-5px);
+}
+
+.btn2:hover{
+    transform:translateY(-5px);
+}
+
+/* LOGIN */
+
+.login-section{
+    width:100%;
+    padding:120px 0;
+    display:flex;
+    justify-content:center;
+}
+
+.login-box{
+    width:420px;
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.login-box h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#ff5c8a;
+}
+
+.login-box input{
+    width:100%;
+    padding:16px;
+    margin-top:18px;
+    border:none;
+    background:#f5f5f5;
+    border-radius:12px;
+    font-size:15px;
+}
+
+.login-box button{
+    width:100%;
+    margin-top:25px;
+    padding:16px;
+    border:none;
+    background:#ff5c8a;
+    color:white;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.login-box button:hover{
+    background:#ff4070;
+}
+
+/* SEARCH */
+
+.search-section{
+    width:90%;
+    margin:40px auto 100px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:52px;
+    margin-bottom:20px;
+    color:#ff5c8a;
+}
+
+.section-sub{
+    color:#666;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+.search-bar{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.search-bar input{
+    width:450px;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.search-bar a{
+    text-decoration:none;
+    background:#ff5c8a;
+    color:white;
+    padding:18px 35px;
+    border-radius:50px;
+}
+
+/* CATEGORY */
+
+.categories{
+    width:90%;
+    margin:auto;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+    background:#ff5c8a;
+    color:white;
+}
+
+.category-card h2{
+    margin-top:15px;
+}
+
+/* PETS */
+
+.pet-section{
+    width:90%;
+    margin:120px auto;
+}
+
+.pet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.pet-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.5s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.pet-card:hover{
+    transform:translateY(-12px);
+}
+
+.pet-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.pet-content{
+    padding:25px;
+}
+
+.pet-content h2{
+    margin-bottom:12px;
+}
+
+.pet-content p{
+    line-height:1.8;
+    color:#666;
+}
+
+.pet-info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    margin-bottom:25px;
+}
+
+.pet-info span{
+    background:#ffe7ef;
+    color:#ff5c8a;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.pet-content a{
+    text-decoration:none;
+    display:inline-block;
+    padding:14px 30px;
+    background:#ff5c8a;
+    color:white;
+    border-radius:40px;
+    transition:0.4s;
+}
+
+.pet-content a:hover{
+    background:#ff4070;
+}
+
+/* DETAILS */
+
+.details-page{
+    width:90%;
+    margin:120px auto;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+.details-page img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+.details-content{
+    padding:45px;
+}
+
+.details-content h1{
+    color:#ff5c8a;
+    margin-bottom:25px;
+    font-size:50px;
+}
+
+.details-content p{
+    line-height:2;
+    font-size:18px;
+    color:#555;
+}
+
+.details-btns{
+    margin-top:35px;
+}
+
+.details-btns a{
+    text-decoration:none;
+    display:inline-block;
+    margin-right:15px;
+    padding:16px 35px;
+    border-radius:40px;
+}
+
+.adopt-btn{
+    background:#ff5c8a;
+    color:white;
+}
+
+.back-btn{
+    background:#eee;
+    color:#333;
+}
+
+/* SUCCESS */
+
+.success-page{
+    width:85%;
+    margin:120px auto;
+    background:white;
+    padding:90px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+.success-page h1{
+    font-size:90px;
+    color:#2ed573;
+}
+
+.success-page h2{
+    margin-top:20px;
+    font-size:42px;
+    color:#333;
+}
+
+.success-page p{
+    margin-top:20px;
+    font-size:20px;
+    color:#666;
+}
+
+.success-page a{
+    display:inline-block;
+    margin-top:35px;
+    text-decoration:none;
+    background:#ff5c8a;
+    color:white;
+    padding:16px 35px;
+    border-radius:40px;
+}
+
+/* REVIEWS */
+
+.review-section{
+    width:90%;
+    margin:120px auto;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.review-card h3{
+    margin-bottom:15px;
+}
+
+.review-card p{
+    line-height:1.8;
+    color:#666;
+}
+
+.stars{
+    margin-top:20px;
+    color:rgb(186, 158, 5);
+    font-size:24px;
+}
+
+/* CONTACT */
+
+.contact{
+    width:90%;
+    margin:120px auto;
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact input,
+.contact textarea{
+    padding:18px;
+    border:none;
+    background:#f5f5f5;
+    border-radius:12px;
+}
+
+.contact button{
+    padding:18px;
+    border:none;
+    background:#ff5c8a;
+    color:white;
+    border-radius:40px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:100px;
+    background:#ff5c8a;
+    color:white;
+    padding:60px 40px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-box h2{
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    line-height:1.8;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-top:12px;
+}
+
+.copy{
+    margin-top:50px;
+    text-align:center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    padding:20px;
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+.hero-content h1{
+    font-size:55px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.section-title{
+    font-size:40px;
+}
+
+.search-bar input{
+    width:100%;
+}
+
+.details-content h1{
+    font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="logo">Purr & Paws</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#login">Login</a>
+<a href="#pets">Pets</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Find Your Forever Friend</h1>
+
+<p>
+Adopt loving pets and give them a happy home through our premium pet adoption platform.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#pets" class="btn1">Adopt Now</a>
+
+<a href="#login" class="btn2">Login</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOGIN -->
+
+<section class="login-section" id="login">
+
+<div class="login-box">
+
+<h1>Member Login</h1>
+
+<input type="text" placeholder="Username">
+
+<input type="email" placeholder="Email Address">
+
+<input type="password" placeholder="Password">
+
+<button>Login Account</button>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+<h1 class="section-title">Search Your Pet</h1>
+
+<p class="section-sub">
+Search for dogs, cats, rabbits and many adorable pets
+</p>
+
+<div class="search-bar">
+
+<input type="text" placeholder="Search dog, cat, rabbit...">
+
+<a href="#dogdetails">Search Dog</a>
+
+</div>
+
+</section>
+
+<!-- CATEGORY -->
+
+<section class="categories">
+
+<h1 class="section-title">Pet Categories</h1>
+
+<div class="category-grid">
+
+<div class="category-card">
+<h2>Dogs</h2>
+<p>Friendly family pets</p>
+</div>
+
+<div class="category-card">
+<h2>Cats</h2>
+<p>Soft and lovable pets</p>
+</div>
+
+<div class="category-card">
+<h2>Rabbits</h2>
+<p>Cute and playful pets</p>
+</div>
+
+<div class="category-card">
+<h2>Birds</h2>
+<p>Beautiful singing pets</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PETS -->
+
+<section class="pet-section" id="pets">
+
+<h1 class="section-title">Featured Pets</h1>
+
+<div class="pet-grid">
+
+<!-- DOG -->
+
+<div class="pet-card">
+
+<img src="https://th.bing.com/th/id/OIP.4SXSxXA_D29QHU2aDrycTwHaEo?w=301&h=188&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+
+<div class="pet-content">
+
+<h2>Golden Retriever</h2>
+
+<p>
+Loyal and playful dog perfect for families and children.
+</p>
+
+<div class="pet-info">
+
+<span>2 Years</span>
+
+<span>Vaccinated</span>
+
+</div>
+
+<a href="#dogdetails">View Details</a>
+
+</div>
+
+</div>
+
+<!-- CAT -->
+
+<div class="pet-card">
+
+<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1974&auto=format&fit=crop">
+
+<div class="pet-content">
+
+<h2>Persian Cat</h2>
+
+<p>
+Soft fluffy cat who loves cuddles and peaceful naps.
+</p>
+
+<div class="pet-info">
+
+<span>1 Year</span>
+
+<span>Female</span>
+
+</div>
+
+<a href="#catdetails">View Details</a>
+
+</div>
+
+</div>
+
+<!-- RABBIT -->
+
+<div class="pet-card">
+
+<img src="https://th.bing.com/th/id/OIP.Elq4YRKUv5vvpViCi37TcwHaHa?w=200&h=187&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+<div class="pet-content">
+
+<h2>White Rabbit</h2>
+
+<p>
+Cute rabbit suitable for caring and loving families.
+</p>
+
+<div class="pet-info">
+
+<span>8 Months</span>
+
+<span>Healthy</span>
+
+</div>
+
+<a href="#rabbitdetails">View Details</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOG DETAILS -->
+
+<section class="details-page" id="dogdetails">
+
+<img src="https://th.bing.com/th/id/OIP.4SXSxXA_D29QHU2aDrycTwHaEo?w=301&h=188&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+
+<div class="details-content">
+
+<h1>Golden Retriever Details</h1>
+
+<p>
+
+Breed : Golden Retriever <br><br>
+
+Age : 2 Years <br><br>
+
+Gender : Male <br><br>
+
+Vaccinated : Yes <br><br>
+
+Color : Golden Brown <br><br>
+
+Behavior : Friendly and energetic <br><br>
+
+Favorite Food : Chicken and rice <br><br>
+
+Perfect companion for families and children.
+
+</p>
+
+<div class="details-btns">
+
+<a href="#success" class="adopt-btn">Adopt Pet</a>
+
+<a href="#pets" class="back-btn">Back</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CAT DETAILS -->
+
+<section class="details-page" id="catdetails">
+
+<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1974&auto=format&fit=crop">
+
+<div class="details-content">
+
+<h1>Persian Cat Details</h1>
+
+<p>
+
+Breed : Persian Cat <br><br>
+
+Age : 1 Year <br><br>
+
+Gender : Female <br><br>
+
+Vaccinated : Yes <br><br>
+
+Color : White <br><br>
+
+Behavior : Calm and lovable <br><br>
+
+Favorite Food : Fish and milk <br><br>
+
+Loves cuddling and sleeping.
+
+</p>
+
+<div class="details-btns">
+
+<a href="#success" class="adopt-btn">Adopt Pet</a>
+
+<a href="#pets" class="back-btn">Back</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RABBIT DETAILS -->
+
+<section class="details-page" id="rabbitdetails">
+
+<img src="https://th.bing.com/th/id/OIP.Elq4YRKUv5vvpViCi37TcwHaHa?w=200&h=187&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+<h1>White Rabbit Details</h1>
+
+<p>
+
+Breed : White Rabbit <br><br>
+
+Age : 8 Months <br><br>
+
+Gender : Male <br><br>
+
+Vaccinated : Yes <br><br>
+
+Color : White <br><br>
+
+Behavior : Soft and playful <br><br>
+
+Favorite Food : Carrots and lettuce <br><br>
+
+Perfect pet for beginners and kids.
+
+</p>
+
+<div class="details-btns">
+
+<a href="#success" class="adopt-btn">Adopt Pet</a>
+
+<a href="#pets" class="back-btn">Back</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SUCCESS -->
+
+<section class="success-page" id="success">
+
+<h1>✓</h1>
+
+<h2>Pet Successfully Adopted</h2>
+
+<p>
+Congratulations! Your adoption request has been submitted successfully.
+</p>
+
+<a href="#home">Go To Home</a>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="review-section" id="reviews">
+
+<h1 class="section-title">Happy Adopters</h1>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<h3>Rahul Sharma</h3>
+
+<p>
+Amazing platform with smooth adoption process and beautiful pets.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+<div class="review-card">
+
+<h3>Priya Verma</h3>
+
+<p>
+I adopted a cat from Purr & Paws and the experience was wonderful.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+<div class="review-card">
+
+<h3>Aman Kapoor</h3>
+
+<p>
+Professional website design and very easy to adopt pets online.
+</p>
+
+<div class="stars">
+★★★★★
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h1 class="section-title">Contact Us</h1>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="7" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div class="footer-box">
+
+<h2>Purr & Paws</h2>
+
+<p>
+Premium pet adoption website helping pets find loving homes.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h2>Quick Links</h2>
+
+<a href="#home">Home</a>
+<a href="#pets">Pets</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="footer-box">
+
+<h2>Support</h2>
+
+<p>Email : support@purrandpaws.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+<p>
+© 2026 Purr & Paws Premium Website
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
